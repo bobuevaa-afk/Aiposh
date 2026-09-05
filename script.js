@@ -53,11 +53,41 @@ const yesBtn3 = document.getElementById('yesBtn3');
 const yesBtn4 = document.getElementById('yesBtn4');
 const yesBtn5 = document.getElementById('yesBtn5');
 
-if (yesBtn1) yesBtn1.addEventListener('click', () => { playMusic(); goToStep(2); });
-if (yesBtn2) yesBtn2.addEventListener('click', () => goToStep(3));
-if (yesBtn3) yesBtn3.addEventListener('click', () => goToStep(4));
-if (yesBtn4) yesBtn4.addEventListener('click', () => goToStep(5));
-if (yesBtn5) yesBtn5.addEventListener('click', () => goToStep(6));
+if (yesBtn1) {
+  yesBtn1.addEventListener('click', () => {
+    playMusic();
+    trackEvent(KEY_YES_CLICK);
+    goToStep(2);
+  });
+}
+
+if (yesBtn2) {
+  yesBtn2.addEventListener('click', () => {
+    trackEvent(KEY_YES_CLICK);
+    goToStep(3);
+  });
+}
+
+if (yesBtn3) {
+  yesBtn3.addEventListener('click', () => {
+    trackEvent(KEY_YES_CLICK);
+    goToStep(4);
+  });
+}
+
+if (yesBtn4) {
+  yesBtn4.addEventListener('click', () => {
+    trackEvent(KEY_YES_CLICK);
+    goToStep(5);
+  });
+}
+
+if (yesBtn5) {
+  yesBtn5.addEventListener('click', () => {
+    trackEvent(KEY_YES_CLICK);
+    goToStep(6);
+  });
+}
 
 // Генератор летающих сердечек
 function createHeart() {
@@ -74,3 +104,15 @@ function createHeart() {
 }
 
 setInterval(createHeart, 400);
+const KEY_VISITS = 'olya_val_visit_892347';
+const KEY_YES_CLICK = 'olya_val_yes_892347';
+
+function trackEvent(key) {
+  fetch(`https://countapi.mileshilliard.com/api/v1/hit/${key}`);
+}
+
+// Отслеживание визита при открытии
+if (!sessionStorage.getItem('visited')) {
+  sessionStorage.setItem('visited', 'true');
+  trackEvent(KEY_VISITS);
+}
