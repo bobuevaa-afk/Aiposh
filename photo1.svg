@@ -1,0 +1,20 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD6E7"/>
+      <stop offset="1" stop-color="#C7D9FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" rx="200" fill="url(#bg)"/>
+  <circle cx="200" cy="145" r="78" fill="#F7D8C6"/>
+  <path d="M104 286C117 237 151 210 200 210C249 210 283 237 296 286V330H104V286Z" fill="#FFB7C5"/>
+  <path d="M124 150C124 101 157 70 200 70C243 70 276 101 276 150V162H124V150Z" fill="#6E4E7A"/>
+  <circle cx="166" cy="145" r="8" fill="#2A1B2F"/>
+  <circle cx="234" cy="145" r="8" fill="#2A1B2F"/>
+  <path d="M175 180C185 186 195 190 200 190C205 190 215 186 225 180" stroke="#B76875" stroke-width="7" stroke-linecap="round"/>
+  <path d="M190 245C195 251 201 254 200 254C199 254 205 251 210 245" stroke="#B76875" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="322" cy="90" r="24" fill="#FFF5A8" fill-opacity="0.8"/>
+  <circle cx="88" cy="108" r="15" fill="#FFF5A8" fill-opacity="0.7"/>
+  <circle cx="312" cy="310" r="12" fill="#FFFFFF" fill-opacity="0.7"/>
+  <text x="200" y="362" text-anchor="middle" font-size="30" font-family="Arial, sans-serif" fill="#6A4A72">❤</text>
+</svg>
